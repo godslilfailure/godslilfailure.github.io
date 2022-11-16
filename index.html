@@ -8,6 +8,8 @@
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,49 +18,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
 
 <body>
 
-    <div class="d-flex justify-content-center">
-        <form action="https://formspree.io/f/mnqrwbyn" method="POST">
-            <div class="row">
-                <label>
-                    Book name:
-                    <input class="form-control" type="book" name="book">
-                </label>
-            </div>
-            <div class="row">
-                <label>
-                    Author name:
-                    <input class="form-control" type="author" name="author">
-                </label>
-            </div>
-            <div class="row">
-                <label>
-                    Your name:
-                    <input class="form-control" type="person" name="person">
-                </label>
-            </div>
-            <div class="row">
-                <label>
-                    Genre:
-                    <input class="form-control" type="Genre" name="Genre">
-                </label>
-            </div>
-            <div class="row">
-                <label>
-                    Your message:
-                    <textarea class="form-control" name="message"></textarea>
-                </label>
-            </div>
-            <!-- your other form fields go here -->
-            <button class="btn btn-success" type="submit">Send</button>
-        </form>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
 
+    <div class="title">
+        <h1>Me Recomende um Livro</h1>
+       </div>
+
+    <div id="formPrincipal" class="d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <div id="formPrincipal" class="d-flex justify-content-center">
+                <form action="https://formspree.io/f/mnqrwbyn" method="POST">
+                    <div class="row" style="padding-top: 15px;">
+                        <label>
+                            Book name:
+                            <input class="form-control" required type="book" name="book">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label>
+                            Author name:
+                            <input class="form-control" required type="author" name="author">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label>
+                            Your name:
+                            <input class="form-control" required type="person" name="person">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label>
+                            Genre:
+                            <input class="form-control" required type="Genre" name="Genre">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label>
+                            Your message:
+                            <textarea class="form-control" required name="message"></textarea>
+                        </label>
+                    </div>
+                    <!-- your other form fields go here -->
+                    <div class="row d-flex justify-content-center" style="padding-bottom: 15px;">
+                        <button class="btn btn-success" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
