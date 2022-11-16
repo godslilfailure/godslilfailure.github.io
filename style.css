@@ -18,9 +18,6 @@
 
     /* Stryling the text and giving it gradiant */
     color:#ffffff;
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 
     /* Make sure text is infront of background images */
