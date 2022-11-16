@@ -35,7 +35,7 @@
     <div id="formPrincipal" class="d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
             <div id="formPrincipal" class="d-flex justify-content-center">
-                <form action="https://formspree.io/f/mnqrwbyn" method="POST">
+                <form id="my-form" action="https://formspree.io/f/mnqrwbyn" method="POST">
                     <div class="row" style="padding-top: 15px;">
                         <label>
                             Book name:
@@ -68,8 +68,9 @@
                     </div>
                     <!-- your other form fields go here -->
                     <div class="row d-flex justify-content-center" style="padding-bottom: 15px;">
-                        <button class="btn btn-success" type="submit">Send</button>
+                        <button class="btn btn-success" id="btn-submit">Send</button>
                     </div>
+                    <p id="my-form-status"></p>
                 </form>
             </div>
         </div>
