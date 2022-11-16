@@ -3,6 +3,7 @@ $(document).ready(function(){
     var form = document.getElementById("my-form");
 
     async function handleSubmit(event) {
+        $('#myModal').modal('show');
         event.preventDefault();
         var status = document.getElementById("my-form-status");
         var data = new FormData(event.target);
@@ -15,6 +16,7 @@ $(document).ready(function(){
         }).then(response => {
             if (response.ok) {
                 status.innerHTML = "Thanks for your submission!";
+                $('#myModal').modal('hide');
                 form.reset()
             } else {
                 response.json().then(data => {
@@ -23,10 +25,14 @@ $(document).ready(function(){
                     } else {
                         status.innerHTML = "Oops! There was a problem submitting your form"
                     }
+                    $('#myModal').modal('hide');
+
                 })
             }
         }).catch(error => {
             status.innerHTML = "Oops! There was a problem submitting your form"
+            $('#myModal').modal('hide');
+
         });
     }
     form.addEventListener("submit", handleSubmit)

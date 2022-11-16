@@ -22,24 +22,35 @@
     <script src="main.js"></script>
 </head>
 
-<body>
-
-    <div class="stars"></div>
-    <div class="twinkling"></div>
-    <div class="clouds"></div>
+<body style="background-color: black;">
 
     <div class="title">
-        <h1>Me Recomende um Livro</h1>
-       </div>
+        <h1>recommend me something</h1>
+    </div>
 
-    <div id="formPrincipal" class="d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div id="formPrincipal" class="d-flex justify-content-center" >
+        <div class="card" style="width: 18rem;background-color: rgba(39, 39, 39, 0.706);color: white;">
             <div id="formPrincipal" class="d-flex justify-content-center">
                 <form id="my-form" action="https://formspree.io/f/mnqrwbyn" method="POST">
                     <div class="row" style="padding-top: 15px;">
                         <label>
-                            Book name:
-                            <input class="form-control" required type="book" name="book">
+                            Type of Recommendation:
+                            <select class="form-control" style="width: 112.415%;" type="type" name="type">
+                                <option value="Anime">Anime</option>
+                                <option value="Movie">Movie</option>
+                                <option value="Book">Book</option>
+                                <option value="Manga">Manga</option>
+                                <option value="Game">Game</option>
+                                <option value="HQ">HQ</option>
+                                <option value="Series">Series</option>
+                                <option value="Music">Music</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="row"">
+                        <label>
+                            Work name:
+                            <input class="form-control" required type="name" name="name">
                         </label>
                     </div>
                     <div class="row">
@@ -62,8 +73,8 @@
                     </div>
                     <div class="row">
                         <label>
-                            Your message:
-                            <textarea class="form-control" required name="message"></textarea>
+                            Send me a message:
+                            <textarea class="form-control" style="width: 109%;" required type="message" name="message"></textarea>
                         </label>
                     </div>
                     <!-- your other form fields go here -->
@@ -72,6 +83,28 @@
                     </div>
                     <p id="my-form-status"></p>
                 </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="myModal" data-toggle="modal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Aguardando resposta</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Aguarde...
+                </div>
+
+
+
             </div>
         </div>
     </div>
